@@ -8,7 +8,7 @@ app.use(parser.json());
 
 const musicRoutes = require("./musicRoutes");
 
-app.use("/music", musicRoutes);
+
 
 app.use((req, res, next) => {
     const logEntry = `host: ${req.host}
@@ -19,6 +19,8 @@ app.use((req, res, next) => {
     console.log(logEntry);
     next();
 });
+
+app.use("/music", musicRoutes);
 
 app.use((err, req, res, next) => {
     res.status(err.status).send(err.message);
