@@ -1,5 +1,5 @@
 const mongoose = require ("mongoose");
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
 mongoose.connect("mongodb://localhost:27017/music", {
     useNewUrlParser: true
@@ -33,4 +33,4 @@ const musicSchema = new Schema ({
     }
 });
 
-module.export = mongoose.model("Music", musicSchema);
+module.exports = mongoose.model("Music", musicSchema);

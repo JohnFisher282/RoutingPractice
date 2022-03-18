@@ -65,4 +65,4 @@ router.delete("/remove/:id", ({params: {id}}, res) => {
     })
 });
 
-module.export = router;
+module.exports = router;
